@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width:100vw;
+    min-height:100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #797272;
+}
+.wrapper{
+    max-width:450px;
+    width:100%;
+    border-radius:16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.form{
+    padding:25px 30px;
+    font-size:1rem;
+}
+.form header{
+    font-size: 1.5rem;
+    font-weight:600;
+    margin-bottom:0.5rem;
+    border-bottom:1px solid #e6e6e6;
+    color: rgb(49, 84, 199);
+}
+.form .name_details{
+    display: flex;
+    width:100%;
+}
+
+.form .name_details .filed:first-child{
+    margin-right:10px;
+}
+.form .name_details .filed:last-child{
+    margin-left:10px;
+}
+.form form .filed{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom:0.5rem;
+}
+.filed label{
+    margin-bottom:0.2rem;
+    font-size: 1.1rem;
+    font-weight:normal;
+}
+.form  .filed i{
+   position:absolute;
+   top:70%;
+   right:10px;
+   color: #797272;
+transform: translateY(-50%);
+cursor: pointer;
+}
+
+.form form .input input{
+    height:40px;
+    font-size: 1rem;
+    width:100%;
+    outline: none;
+    border-radius:5px;
+    border:1px solid #ccc;
+    padding:0px 10px;
+}
+.form form .image input{
+    font-size: 1rem;
+}
+.form form .button input{
+    width:100%;
+    padding:10px;
+    cursor: pointer;
+    background-color:rgb(49, 84, 199);
+    color:#f7f7f7;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+} 
+.form .link{
+  text-align: center;
+}
+.form .link a:hover{
+text-decoration: underline;
+}
+:is(.sign_up, .login) .text_erreur{
+    color:rgb(212, 29, 29);
+    font-size:0.8rem;
+   
+}
+/* user style */
+.user{
+    padding:25px 30px;
+}
+.user header,.list_users a{
+    display: flex;
+    align-items: center;
+    padding-bottom:15px;
+    justify-content: space-between;
+    border-bottom:1px solid #ccc;   
+}
+:is(.user, .list_users) .content{
+display: flex;
+align-items: center;
+}
+:is(.user, .list_users) span{
+    font-size: 1.2rem;
+    font-weight:600;
+    
+}
+:is(.user, .list_users) .content_details{
+margin-left:10px;
+color: #000;
+}
+.user .list_users .content_details p span{
+    font-size: 1rem;
+    color: rgb(49, 84, 199);
+}
+.user header .content img{
+    width: 55px;
+    height:55px;
+}
+.wrapper img{
+    object-fit: cover;
+    border-radius:50%;
+}
+.user header .logout{
+    padding:10px;
+    background-color: rgb(49, 84, 199);
+    border-radius:5px;
+    color:#f7f7f7;
+}
+.list_users img{
+    width:44px;
+    height:44px;
+}
+.user .serach_users{
+    display: flex;
+    margin:20px 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.user .serach_users input{
+    position: absolute;
+    width: calc(100% - 55px);
+    height:40px;
+    padding:0 10px;
+    outline:none;
+    border-radius:5px 0px 0px 5px;
+    border: 1px solid #ccc;
+    opacity:0;
+    pointer-events: none;
+    font-size:1rem;
+    transition: all 0.3s ease;
+}
+.user .serach_users .show{
+    opacity:1;
+    pointer-events: auto;
+}
+.user .serach_users button {
+color:#f7f7f7;
+font-size: 1.2rem;
+}
+.user .serach_users button.active i::before{
+    content: '\f00d';
+}
+.user .serach_users button{
+    width: 52px;
+    height:40px;
+    border-radius:0px 5px 5px 0px;
+    background-color: rgb(49, 84, 199);
+    color:#f7f7f7;
+    border: none;
+    cursor:pointer;
+}
+.user .list_users{
+    max-height:350px;
+    overflow-y:auto;
+}
+.user .list_users a{
+    border-bottom: 1px solid #e6e6e6;
+    margin-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.user .list_users a:last-child{
+    border-bottom:0;
+    border: none;
+}
+.user .list_users a .status{
+    color:rgb(31, 128, 22);
+    font-size:0.8rem;
+}
+.user .list_users a .status.offline{
+    color:rgb(167, 194, 165);
+}
+/* chat */
+.chat{
+margin:10px 0px;
+padding: 10px 0px ;
+}
+.chat header{
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;   
+}
+.chat header a{
+    font-size:1.2rem;
+    color: rgb(49, 84, 199);
+}
+.chat header img{
+    margin-left:10px;
+    width:50px;
+    height:50px;
+    margin-right:10px;
+}
+.chat header .details_user_chat{
+    color:#000;
+}
+.chat header .details_user_chat span{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.chat .chat_box{
+    height:400px;
+    padding:10px 20px 10px 20px;
+    overflow-y: auto;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+    inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+    position: relative;
+    width:100%;
+}
+.chat .chat_box .text{
+position: absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:100%;
+text-align: center;
+font-size:1.2rem;
+}
+.chat .chat_area{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 10px;
+padding:15px 15px 0px 15px;
+}
+.chat .chat_area input{
+width: calc(100% - 57px);
+height:45px;
+border:1px solid #ccc;
+border-radius:5px 0px 0px 5px;
+padding:0px 10px;
+font-size: 1.2rem;
+}
+.chat .chat_area button{
+    width:54px;
+    height:45px;
+    border-radius:0px 5px 5px 0px;
+    outline: none;
+    background-color: rgb(49, 84, 199);
+    color: #f7f7f7;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity:0.7;
+    pointer-events: none;
+}
+.chat .chat_area button.active{
+    opacity:1;
+    pointer-events:auto;
+}
+.chat .chat_box .message{
+    display: flex;
+    margin:10px 0px;
+    align-items: end;
+}
+.chat .chat_box .message .details{
+    padding:10px;
+    border-radius:5px;
+    max-width: calc(100% - 180px);
+}
+.chat .chat_box .outgoing {
+    justify-content:flex-end;
+}
+.chat .chat_box .outgoing .details{
+    border-radius:20px 20px 0px 20px;
+    background-color:rgb(49, 84, 199);
+color:#fff;
+}
+.chat .chat_box .incoming img{
+width: 40px;
+height:40px;
+margin-right:5px;
+}
+.chat .chat_box .incoming .details{
+   border-radius:20px 20px 20px 0px;
+   background-color:#fff;
+}
